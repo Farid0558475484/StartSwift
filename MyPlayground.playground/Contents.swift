@@ -100,6 +100,8 @@ for i in listOfSport.sorted(){
 }
 
 
+//Множество (Set)
+
 let number: Set = [5,3,5,7,3,7,27,]
 number.sorted()
 
@@ -113,4 +115,40 @@ oddNumbers.intersection(evenNumbers).sorted() //odinakomie
 oddNumbers.subtracting(primeNumbers).sorted() //cem razlicayutsya a ot b
 oddNumbers.symmetricDifference(primeNumbers).sorted() //obwie razliciye
 
+//Словарь (Dictionary)
 
+//Dictionary <Key,Value>
+//[Key,Value]
+
+var dictinary = [Int: String]()
+
+var height = ["farid":1.65,"elmar":1.70]
+
+height["farid"]
+
+
+var resault = ["Mathematics":100, "Geography":99, "Russian":74]
+
+resault.count
+resault.isEmpty
+
+resault["Mathematics"] = 95
+resault
+
+resault["History"] = 55
+resault
+
+
+resault.updateValue( 50, forKey: "Mathematics")
+resault
+
+resault.removeValue(forKey: "Russian")
+resault
+
+
+for (key,i) in resault{
+    print("\(key):\(i)")
+}
+
+var keys = Array(resault.keys)
+var values = Array(resault.values)
