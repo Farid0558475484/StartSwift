@@ -97,7 +97,7 @@ for i in listOfSport.sorted(){
 }
 
 
-//Множество (Set)
+//Множество (Set)----------------------------------------------------------------
 
 let number: Set = [5,3,5,7,3,7,27,]
 number.sorted()
@@ -111,9 +111,9 @@ oddNumbers.intersection(evenNumbers).sorted() //odinakomie
 oddNumbers.subtracting(primeNumbers).sorted() //cem razlicayutsya a ot b
 oddNumbers.symmetricDifference(primeNumbers).sorted() //obwie razliciye
 
-//Словарь (Dictionary)
+//Словарь (Dictionary)----------------------------------------------------------------
 
-//Dictionary <Key,Value>
+//Dictionary <Key,Value>----------------------------------------------------------------
 //[Key,Value]
 
 var dictinary = [Int: String]()
@@ -148,7 +148,7 @@ var keys = Array(resault.keys)
 var values = Array(resault.values)
 
 
-//functon
+//functon----------------------------------------------------------------------------------------------
 
 func square(num:Int){
     print(num * num)
@@ -225,6 +225,57 @@ func squares(num:Int...){
 squares(num: 1,2,3,4,5)
 
 
-var ff:Int=10
-var gg:Bool=true
-print(ff + gg)
+//var ff:Int=10
+//var gg:Bool=true
+//print(ff + gg)
+
+
+
+
+//Клоусеры closer---------------------------------------------------------------------------------------------
+
+let driving = {
+    print("i am driving a car")
+}
+driving()
+
+
+let driving2 = {(person:String)in
+print("\(person) a drivin car")}
+driving2("Ferid")
+
+
+func pay (user:String, amout:Int){
+}
+let payment = {(user:String, amout:Int) in}
+
+
+let drivingWithReturn = {( place:String) -> String in
+return "\(place) a drivin car" }
+
+let message = drivingWithReturn("London")
+print(message)
+
+let payment2 = {(user:String)  in
+     print("myau \(user)")
+}
+payment2("Mirr")
+
+
+let payment3 = {(user:String) -> Bool in
+    print("myau \(user)")
+   return true
+}
+payment3("Muuuurr")
+
+
+func animate(durations: Int,animations:()->Void){
+    print("Starting a \(durations) second animations")
+    animations()
+}
+
+//animate(durations: 999, animations: {
+//    print("Image")
+//})
+
+animate(durations: 999){print("Image")}
